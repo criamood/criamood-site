@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description:
     "CriaMood é uma marca que une fé e streetwear. Conheça nossa história e visite nossa loja online.",
   metadataBase: new URL("https://www.criamood.com.br"),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "CriaMood | Fé e Estilo em um Único Lugar",
     description:

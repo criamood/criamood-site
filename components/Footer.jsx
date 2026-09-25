@@ -9,9 +9,11 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           {/* MARCA */}
           <div className="max-w-md">
-            <h2 className="font-display text-3xl mb-4 text-paper">
-              CriaMood
-            </h2>
+            <img
+              src="/images/logo-wordmark.png"
+              alt="CriaMood"
+              className="h-8 w-auto mb-5"
+            />
             <p className="text-paper-muted leading-relaxed">
               Fé e estilo em um único lugar. Peças autorais que unem
               propósito e streetwear para o seu dia a dia.
