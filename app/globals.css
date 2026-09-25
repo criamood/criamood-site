@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Identidade CriaMood — fé + streetwear vintage */
+  --ink: #0c0b0a;       /* preto quase puro, fundo principal */
+  --ink-soft: #17140f;  /* preto levemente aquecido, seções alternadas */
+  --paper: #f4efe6;     /* creme, texto sobre fundo escuro */
+  --paper-muted: #cfc6b6;
+  --brand: #c1502e;     /* terracota/ember — acento principal */
+  --brand-dark: #a3401f;
+  --background: var(--ink);
+  --foreground: var(--paper);
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-muted: var(--paper-muted);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-display);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.02em;
+}
