@@ -26,13 +26,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="bg-paper rounded-2xl px-3 py-2">
-            <img
-              src="/images/logo2.png"
-              alt="CriaMood"
-              className="w-[130px] md:w-[150px]"
-            />
-          </div>
+          <img
+            src="/images/logo-wordmark.png"
+            alt="CriaMood"
+            className="h-9 md:h-10 w-auto"
+          />
         </Link>
 
         {/* BOTÃO MOBILE */}
