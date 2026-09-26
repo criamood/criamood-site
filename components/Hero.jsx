@@ -98,12 +98,12 @@ export default function Hero() {
                 href={slide.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full aspect-[2/1] md:aspect-[16/6]"
+                className="block w-full"
               >
                 <img
                   src={slide.image}
                   alt={slide.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto block"
                 />
               </a>
             ) : (
