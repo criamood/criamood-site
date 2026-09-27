@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  /* Identidade CriaMood — fé + streetwear vintage */
-  --ink: #0c0b0a;       /* preto quase puro, fundo principal */
-  --ink-soft: #17140f;  /* preto levemente aquecido, seções alternadas */
-  --paper: #f4efe6;     /* creme, texto sobre fundo escuro */
+  /* Identidade CriaMood — paleta Sahara Sand → Tuna */
+  --ink: #0c0b0a;          /* preto — cor principal, mantida */
+  --ink-soft: #222a36;     /* Tuna Dark 01 — seções alternadas escuras */
+  --paper: #f4efe6;        /* creme, texto sobre fundo escuro */
   --paper-muted: #cfc6b6;
-  --brand: #c1502e;     /* terracota/ember — acento principal */
-  --brand-dark: #a3401f;
+  --brand: #cfc55b;        /* Sahara Sand Dark 01 — acento principal */
+  --brand-dark: #b1a535;   /* Sahara Sand Dark 02 — hover/estado escuro */
+  --brand-light: #eee582;  /* Sahara Sand base — realces sutis */
   --background: var(--ink);
   --foreground: var(--paper);
 }
@@ -24,6 +25,7 @@ html {
   --color-paper-muted: var(--paper-muted);
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
