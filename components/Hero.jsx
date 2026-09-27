@@ -168,10 +168,12 @@ export default function Hero() {
                 <div className="relative">
                   <div className="border border-white/10 rounded-[32px] p-10 bg-ink-soft">
                     <p className="font-display text-3xl md:text-4xl text-paper leading-tight mb-6">
-                      &ldquo;Reavive o dom de Deus que há em você.&rdquo;
+                      &ldquo;Os que confiam no SENHOR serão como o monte
+                      de Sião, que não se abala, mas permanece para
+                      sempre.&rdquo;
                     </p>
                     <p className="text-sm uppercase tracking-[3px] text-brand mb-8">
-                      2 Timóteo 1:6
+                      Salmos 125:1
                     </p>
                     <div className="h-px bg-white/10 mb-8" />
                     <p className="text-paper-muted text-sm leading-relaxed">
