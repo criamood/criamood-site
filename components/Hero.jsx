@@ -26,20 +26,9 @@ const slides = [
     link: STORE_URL,
   },
   {
-    eyebrow: "Nova coleção",
-    title: ["STREETWEAR", "COM", "PROPÓSITO."],
-    subtitle:
-      "Camisetas, oversized e croppeds com estampas autorais. Linha feminina e masculina, direto na nossa loja online.",
-    primaryCta: {
-      label: "Ver coleção feminina",
-      href: `${STORE_URL}/feminina/`,
-      external: true,
-    },
-    secondaryCta: {
-      label: "Ver coleção masculina",
-      href: `${STORE_URL}/masculino/`,
-      external: true,
-    },
+    image: "/banners/banner-camisetas-oversized.jpg",
+    alt: "CriaMood — Camisetas Oversized. Fé + Estilo. Design exclusivo.",
+    link: STORE_URL,
   },
   {
     eyebrow: "Loja online",
