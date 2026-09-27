@@ -10,9 +10,9 @@ export default function Footer() {
           {/* MARCA */}
           <div className="max-w-md">
             <img
-              src="/images/logo-wordmark.png"
+              src="/images/logo-full-white.png"
               alt="CriaMood"
-              className="h-8 w-auto mb-5"
+              className="h-9 w-auto mb-5"
             />
             <p className="text-paper-muted leading-relaxed">
               Fé e estilo em um único lugar. Peças autorais que unem

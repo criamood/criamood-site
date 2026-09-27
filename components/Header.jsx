@@ -27,9 +27,9 @@ export default function Header() {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
           <img
-            src="/images/logo-wordmark.png"
+            src="/images/logo-full-white.png"
             alt="CriaMood"
-            className="h-9 md:h-10 w-auto"
+            className="h-10 md:h-12 w-auto"
           />
         </Link>
 
