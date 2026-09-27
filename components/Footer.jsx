@@ -86,9 +86,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-sm text-paper-muted/70">
-          © CriaMood {new Date().getFullYear()}. Todos os direitos
-          reservados.
+        <div className="border-t border-white/10 pt-8 text-sm text-paper-muted/70 flex flex-col sm:flex-row justify-between gap-3">
+          <span>
+            © CriaMood {new Date().getFullYear()}. Todos os direitos
+            reservados.
+          </span>
+          <Link
+            href="/politica-de-privacidade"
+            className="hover:text-brand duration-300"
+          >
+            Política de Privacidade
+          </Link>
         </div>
       </div>
     </footer>
