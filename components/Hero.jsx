@@ -37,6 +37,13 @@ const slides = [
     link: STORE_URL,
   },
   {
+    image: "/banners/banner-vista-sua-fe.jpg",
+    width: 3780,
+    height: 1890,
+    alt: "CriaMood — Vista sua fé.",
+    link: STORE_URL,
+  },
+  {
     eyebrow: "Loja online",
     title: ["TUDO NUM", "SÓ LUGAR", "PRA VOCÊ."],
     subtitle:
