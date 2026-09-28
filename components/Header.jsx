@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 
@@ -26,9 +27,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
-          <img
+          <Image
             src="/images/logo-full-white.png"
             alt="CriaMood"
+            width={1801}
+            height={320}
+            priority
             className="h-10 md:h-12 w-auto"
           />
         </Link>

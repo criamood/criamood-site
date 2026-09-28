@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 
@@ -11,7 +12,8 @@ const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
  * Dois formatos possíveis por slide:
  *
  * 1) Imagem pronta (arte já com texto/logo desenhados nela):
- *    { image: "/banners/arquivo.jpg", alt: "descrição", link: STORE_URL }
+ *    { image: "/banners/arquivo.jpg", width, height, alt: "descrição", link: STORE_URL }
+ *    width/height = dimensões reais do arquivo (pra evitar distorção).
  *
  * 2) Texto + botões (usado quando ainda não tem arte pronta):
  *    { eyebrow, title: [linha1, linha2, linha3], subtitle, primaryCta, secondaryCta }
@@ -22,11 +24,15 @@ const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 const slides = [
   {
     image: "/banners/banner-pense-ilimitado.jpg",
+    width: 3780,
+    height: 1890,
     alt: "CriaMood — Pense Ilimitado. Vista a sua fé com estilo.",
     link: STORE_URL,
   },
   {
     image: "/banners/banner-camisetas-oversized.jpg",
+    width: 3780,
+    height: 1890,
     alt: "CriaMood — Camisetas Oversized. Fé + Estilo. Design exclusivo.",
     link: STORE_URL,
   },
@@ -89,9 +95,13 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="block w-full"
               >
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.alt}
+                  width={slide.width}
+                  height={slide.height}
+                  priority={index === 0}
+                  sizes="100vw"
                   className="w-full h-auto block"
                 />
               </a>

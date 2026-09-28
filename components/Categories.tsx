@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 
 const destaques = [
@@ -82,11 +84,13 @@ export default function Categories() {
               rel="noopener noreferrer"
               className="group overflow-hidden rounded-3xl bg-ink-soft border border-white/10 block"
             >
-              <div className="overflow-hidden">
-                <img
+              <div className="overflow-hidden relative h-[220px]">
+                <Image
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-[220px] object-cover opacity-90 group-hover:opacity-100 transition duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition duration-500 group-hover:scale-105"
                 />
               </div>
 

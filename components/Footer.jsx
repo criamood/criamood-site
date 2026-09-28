@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 
@@ -9,9 +10,11 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           {/* MARCA */}
           <div className="max-w-md">
-            <img
+            <Image
               src="/images/logo-full-white.png"
               alt="CriaMood"
+              width={1801}
+              height={320}
               className="h-9 w-auto mb-5"
             />
             <p className="text-paper-muted leading-relaxed">
@@ -61,9 +64,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-brand duration-300"
               >
-                <img
+                <Image
                   src="/icons/instagram.svg"
                   alt="Instagram"
+                  width={20}
+                  height={20}
                   className="w-5 h-5"
                 />
                 @cria.mood
@@ -75,9 +80,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-brand duration-300"
               >
-                <img
+                <Image
                   src="/icons/whatsapp.svg"
                   alt="WhatsApp"
+                  width={20}
+                  height={20}
                   className="w-5 h-5"
                 />
                 (21) 99551-5124

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhatsappButton() {
   return (
     <a
@@ -22,15 +24,19 @@ export default function WhatsappButton() {
         duration-300
       "
     >
-      <img
+
+      <Image
         src="/icons/whatsapp.svg"
         alt="WhatsApp"
+        width={20}
+        height={20}
         className="w-5 h-5"
       />
 
       <span className="hidden md:block">
         WhatsApp
       </span>
+
     </a>
   );
 }
