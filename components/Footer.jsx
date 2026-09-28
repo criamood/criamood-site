@@ -93,6 +93,22 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* SELO DE CONFIANÇA */}
+        <div className="border-t border-white/10 py-8 grid sm:grid-cols-3 gap-6 text-sm text-paper-muted">
+          <div className="flex items-center gap-3">
+            <span className="text-brand">✓</span>
+            Frete grátis acima de R$ 189
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-brand">✓</span>
+            Troca em até 7 dias
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-brand">✓</span>
+            Pagamento via Pix, cartão ou boleto
+          </div>
+        </div>
+
         <div className="border-t border-white/10 pt-8 text-sm text-paper-muted/70 flex flex-col sm:flex-row justify-between gap-3">
           <span>
             © CriaMood {new Date().getFullYear()}. Todos os direitos

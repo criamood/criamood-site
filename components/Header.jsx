@@ -1,20 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 
 const navLinks = [
-  { label: "Início", href: "/" },
-  { label: "Quem Somos", href: "/#sobre" },
-  { label: "Coleção", href: "/#colecao" },
-  { label: "Contato", href: "/contato" },
+  { label: "Início", href: "/", key: "inicio" },
+  { label: "Quem Somos", href: "/#sobre", key: "sobre" },
+  { label: "Coleção", href: "/#colecao", key: "colecao" },
+  { label: "Contato", href: "/contato", key: "contato" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("inicio");
+  const pathname = usePathname();
+
+  // "scroll-spy": destaca Quem Somos / Coleção conforme a seção visível na home
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const sections = [
+      { id: "sobre", key: "sobre" },
+      { id: "colecao", key: "colecao" },
+    ]
+      .map(({ id, key }) => ({ el: document.getElementById(id), key }))
+      .filter((s) => s.el);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) {
+          const match = sections.find((s) => s.el === visible.target);
+          if (match) setActiveSection(match.key);
+        } else if (window.scrollY < 200) {
+          setActiveSection("inicio");
+        }
+      },
+      { rootMargin: "-45% 0px -45% 0px" }
+    );
+
+    sections.forEach((s) => observer.observe(s.el));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  const isActive = (link) => {
+    if (link.key === "contato") return pathname === "/contato";
+    if (pathname !== "/") return false;
+    return activeSection === link.key;
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-ink/95 backdrop-blur border-b border-white/10 z-50">
@@ -52,7 +91,12 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-paper-muted hover:text-brand duration-300"
+              aria-current={isActive(link) ? "page" : undefined}
+              className={`duration-300 ${
+                isActive(link)
+                  ? "text-brand"
+                  : "text-paper-muted hover:text-brand"
+              }`}
             >
               {link.label}
             </Link>
@@ -78,7 +122,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="px-6 py-4 border-b border-white/10 text-paper font-medium hover:bg-ink-soft"
+                aria-current={isActive(link) ? "page" : undefined}
+                className={`px-6 py-4 border-b border-white/10 font-medium hover:bg-ink-soft ${
+                  isActive(link) ? "text-brand" : "text-paper"
+                }`}
               >
                 {link.label}
               </Link>
