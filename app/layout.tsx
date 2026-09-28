@@ -40,6 +40,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "CriaMood",
+    url: "https://www.criamood.com.br",
+    logo: "https://www.criamood.com.br/images/logo-full-white.png",
+    description:
+      "CriaMood é uma marca que une fé e streetwear. Camisetas e itens personalizados com design autoral.",
+    sameAs: [
+      "https://www.instagram.com/cria.mood",
+      "https://criamood.lojavirtualnuvem.com.br",
+      "https://www.google.com/maps/place/CriaMood/data=!4m2!3m1!1s0x0:0xedfd80bfcf9a4003?sa=X&ved=1t:2428&ictx=111",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+55-21-99551-5124",
+      contactType: "customer service",
+      areaServed: "BR",
+      availableLanguage: "Portuguese",
+    },
+  };
+
   return (
     <html
       lang="pt-BR"
@@ -47,6 +69,10 @@ export default function RootLayout({
       className={`${poppins.variable} ${bebas.variable} h-full antialiased`}
     >
       <body className="font-sans bg-[#0c0b0a] text-[#f4efe6]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         <Analytics />
       </body>
