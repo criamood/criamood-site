@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
+const GOOGLE_PROFILE_URL =
+  "https://www.google.com/maps/place/CriaMood/data=!4m2!3m1!1s0x0:0xedfd80bfcf9a4003?sa=X&ved=1t:2428&ictx=111";
 
 export default function Footer() {
   return (
@@ -94,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* SELO DE CONFIANÇA */}
-        <div className="border-t border-white/10 py-8 grid sm:grid-cols-3 gap-6 text-sm text-paper-muted">
+        <div className="border-t border-white/10 pt-8 grid sm:grid-cols-3 gap-6 text-sm text-paper-muted">
           <div className="flex items-center gap-3">
             <span className="text-brand">✓</span>
             Frete grátis acima de R$ 189
@@ -107,6 +109,32 @@ export default function Footer() {
             <span className="text-brand">✓</span>
             Pagamento via Pix, cartão ou boleto
           </div>
+        </div>
+
+        {/* SELOS DE IMAGEM (SSL + avaliações Google) */}
+        <div className="py-8 flex flex-wrap items-center gap-8">
+          <Image
+            src="/badges/selo-ssl.png"
+            alt="Certificado SSL — site seguro"
+            width={972}
+            height={465}
+            className="h-10 w-auto opacity-90"
+          />
+
+          <a
+            href={GOOGLE_PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80 duration-300"
+          >
+            <Image
+              src="/badges/selo-google-5-estrelas.png"
+              alt="Avaliação 5 estrelas da CriaMood no Google"
+              width={840}
+              height={228}
+              className="h-9 w-auto"
+            />
+          </a>
         </div>
 
         <div className="border-t border-white/10 pt-8 text-sm text-paper-muted/70 flex flex-col sm:flex-row justify-between gap-3">
