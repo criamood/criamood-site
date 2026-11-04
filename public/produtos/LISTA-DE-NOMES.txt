@@ -1,0 +1,53 @@
+NOME DOS ARQUIVOS DE FOTO (salve em public/produtos, em .jpg, .png ou .webp)
+
+caneca-de-porcelana.jpg   <- Caneca de porcelana
+caneca-imperial.png   <- Caneca Imperial
+caneca-magica.jpg   <- Caneca mágica
+caneca-magica-com-alca-de-coracao.jpg   <- Caneca mágica com alça de coração
+caneca-com-colher.jpg   <- Caneca com colher
+caneca-com-alca-e-interior-colorido.jpg   <- Caneca com alça e interior colorido
+caneca-coracao-branca.jpg   <- Caneca coração branca
+caneca-preta-com-tarja-branca.jpg   <- Caneca preta com tarja branca
+caneca-interior-cromado.jpg   <- Caneca interior cromado
+caneca-alca-sport.jpg   <- Caneca alça sport
+caneca-glitter.jpg   <- Caneca glitter
+caneca-perolada.jpg   <- Caneca perolada
+caneca-base-glitter.png   <- Caneca base glitter
+xicara-de-ceramica.jpg   <- Xícara de cerâmica
+xicara-borda-bronze.jpg   <- Xícara borda bronze
+xicara-de-ceramica-com-interior-colorido.jpg   <- Xícara de cerâmica com interior colorido
+xicara-magica-com-pires.jpg   <- Xícara mágica com pires
+torre-quarteto-de-xicaras.jpg   <- Torre quarteto de xícaras
+pires-branco-de-ceramica.jpg   <- Pires branco de cerâmica
+garrafa-termica-squeeze.jpg   <- Garrafa térmica squeeze
+garrafa-termica-fresh.jpg   <- Garrafa térmica Fresh
+garrafa-squeeze-termica.png   <- Garrafa squeeze térmica
+garrafa-termica-bicolor.jpg   <- Garrafa térmica bicolor
+copo-jarra-termico.jpg   <- Copo jarra térmico
+copo-termico-com-tampa-e-abridor.jpg   <- Copo térmico com tampa e abridor
+garrafa-squeeze-branca-com-bico-dosador-retratil.jpg   <- Garrafa squeeze branca com bico dosador retrátil
+squeeze-tampa-bolinha.jpg   <- Squeeze tampa bolinha
+garrafa-squeeze-branca.jpg   <- Garrafa squeeze branca
+garrafa-de-vidro-ecoline.jpg   <- Garrafa de vidro Ecoline
+camiseta-de-algodao-personalizada.jpg   <- Camiseta de algodão personalizada
+camiseta-de-poliester-personalizada.jpg   <- Camiseta de poliéster personalizada
+ecobag-de-algodao-cru-personalizada.jpg   <- Ecobag de algodão cru personalizada
+bottons-personalizados.png   <- Bottons personalizados
+chaveiro-personalizado.jpg   <- Chaveiro personalizado
+porta-cartao-com-photocard.jpg   <- Porta-cartão com photocard
+azulejo-decorativo.jpg   <- Azulejo decorativo
+quadros-em-azulejo.jpg   <- Quadros em azulejo
+quadro-decorativo-em-mdf.jpg   <- Quadro decorativo em MDF
+quadros-em-mdf.jpg   <- Quadros em MDF
+garrafa-termica-sport-pop.jpg   <- Garrafa térmica Sport Pop
+garrafa-de-aluminio-sport-pop.jpg   <- Garrafa de alumínio Sport Pop
+copo-inox-termico-kawaii.png   <- Copo inox térmico Kawaii
+garrafa-inox-termica-baby-pop.png   <- Garrafa inox térmica Baby Pop
+toalha-lavabo-infantil.jpg   <- Toalha lavabo infantil
+kit-caneca-pote-com-biscoitos.jpg   <- Kit caneca + pote com biscoitos
+kit-garrafa-termica-quadro-mdf.jpg   <- Kit garrafa térmica + quadro MDF
+kit-garrafa-infantil-toalha-lavabo.jpg   <- Kit garrafa infantil + toalha lavabo
+lembrancinhas.jpg   <- Lembrancinhas
+copo-termico-inox-personalizado.jpg   <- Copo térmico inox personalizado
+agenda-personalizada.jpg   <- Agenda personalizada
+mousepad-personalizado.jpg   <- Mousepad personalizado

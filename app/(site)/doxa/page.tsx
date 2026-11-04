@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Doxa | Camisetas cristãs de algodão",
   description: "Vista a sua fé com estilo. Doxa, a marca de camisetas cristãs de algodão da CriaMood, com coleções autorais.",
   alternates: { canonical: "/doxa" },
+  // Ícone próprio da Doxa (montanhas): vale só nesta página.
+  icons: { icon: [{ url: "/doxa/favicon.ico" }, { url: "/doxa/icon.png", type: "image/png" }], apple: "/doxa/apple-touch-icon.png" },
 };
 
 // Paleta oficial: preto + Sahara Sand (dourado) + Tuna (azul-petróleo). Quando o logo da Doxa ficar pronto,

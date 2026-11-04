@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Product, waLink } from "@/lib/site";
+import { Product, fotoDe, waLink } from "@/lib/site";
 
 export default function ProductCard({ p }: { p: Product }) {
+  const img = p.img ?? fotoDe(p.name);
   return (
     <article className="card">
       <div className="photo">
-        {p.img ? <Image src={p.img} alt={p.name} fill sizes="(max-width:860px) 50vw, 240px" style={{ objectFit: "cover" }} /> : "foto em breve"}
+        {img ? <Image src={img} alt={p.name} fill sizes="(max-width:860px) 50vw, 240px" style={{ objectFit: "cover" }} /> : "foto em breve"}
       </div>
       <h3>{p.name}</h3>
       <div className="p">{p.detail ?? "Consulte valores"}</div>

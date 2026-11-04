@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: DESC,
   metadataBase: new URL("https://www.criamood.com.br"),
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
     apple: "/apple-touch-icon.png",
   },
   openGraph: {

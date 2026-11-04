@@ -1,3 +1,5 @@
+import fotos from "./fotos.json";
+
 export const WA_NUMBER = "5521995515124";
 export const WA_DISPLAY = "(21) 99551-5124";
 export const EMAIL = "contato.criamood@gmail.com";
@@ -9,6 +11,12 @@ export const DOXA_STORE_URL = "https://criamood.lojavirtualnuvem.com.br";
 
 export const waLink = (msg: string) =>
   `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+export const slugify = (s: string) =>
+  s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+// Procura a foto pelo nome do produto (arquivo public/produtos/<nome-do-produto>.jpg)
+export const fotoDe = (name: string): string | undefined => (fotos as Record<string, string>)[slugify(name)];
 
 export type Product = { name: string; detail?: string; img?: string };
 export type Category = {
