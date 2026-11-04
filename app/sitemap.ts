@@ -1,26 +1,10 @@
 import type { MetadataRoute } from "next";
+import { categories, SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.criamood.com.br";
-
+  const fixed = ["", "/produtos", "/como-pedir", "/contato", "/criaclick", "/doxa", "/politica-de-privacidade"];
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/contato`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/politica-de-privacidade`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
+    ...fixed.map((p) => ({ url: `${SITE_URL}${p}`, lastModified: new Date() })),
+    ...categories.map((c) => ({ url: `${SITE_URL}/produtos/${c.slug}`, lastModified: new Date() })),
   ];
 }

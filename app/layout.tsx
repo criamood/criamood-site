@@ -15,24 +15,27 @@ const bebas = Bebas_Neue({
   variable: "--font-display",
 });
 
+const TITLE = "CriaMood | Presentes personalizados";
+const DESC =
+  "Canecas, garrafas, camisetas, bottons, chaveiros e muito mais personalizados com a sua arte, foto ou frase. Peça pelo WhatsApp.";
+
 export const metadata: Metadata = {
-  title: "CriaMood | Fé e Estilo em um Único Lugar",
-  description:
-    "CriaMood é uma marca que une fé e streetwear. Conheça nossa história e visite nossa loja online.",
+  title: TITLE,
+  description: DESC,
   metadataBase: new URL("https://www.criamood.com.br"),
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "CriaMood | Fé e Estilo em um Único Lugar",
-    description:
-      "CriaMood é uma marca que une fé e streetwear. Conheça nossa história e visite nossa loja online.",
+    title: TITLE,
+    description: DESC,
     url: "https://www.criamood.com.br",
     siteName: "CriaMood",
     locale: "pt_BR",
     type: "website",
   },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESC },
 };
 
 export default function RootLayout({
@@ -45,9 +48,9 @@ export default function RootLayout({
     "@type": "Organization",
     name: "CriaMood",
     url: "https://www.criamood.com.br",
-    logo: "https://www.criamood.com.br/images/logo-full-white.png",
+    logo: "https://www.criamood.com.br/logo-criamood.png",
     description:
-      "CriaMood é uma marca que une fé e streetwear. Camisetas e itens personalizados com design autoral.",
+      "CriaMood cria presentes personalizados: canecas, garrafas, camisetas, bottons, chaveiros e mais. Também é a casa da Doxa, marca de camisetas cristãs de algodão.",
     sameAs: [
       "https://www.instagram.com/cria.mood",
       "https://criamood.lojavirtualnuvem.com.br",
