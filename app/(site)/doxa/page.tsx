@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DOXA_STORE_URL, waLink } from "@/lib/site";
+import DoxaBanners, { type BannerSlide } from "@/components/site/DoxaBanners";
 
 export const metadata: Metadata = {
   title: "Doxa | Camisetas cristãs de algodão",
@@ -18,6 +19,25 @@ const links = [
   { label: "Ver tudo", href: "/produtos/" },
 ];
 
+// Banners da Doxa (arquivos em /public/doxa). Para trocar a ordem, basta reordenar esta lista.
+const banners: BannerSlide[] = [
+  {
+    src: "/doxa/banner-vista-sua-fe.jpg",
+    alt: "Doxa: Vista sua fé. Camisetas exclusivas com até 40% off, com modelos usando camisetas PRAY. e GOD IS GOOD.",
+    href: DOXA_STORE_URL + "/produtos/",
+  },
+  {
+    src: "/doxa/banner-pense-ilimitado.jpg",
+    alt: "Doxa: Pense ilimitado. Vista a sua fé com estilo! Modelo sorrindo com camiseta branca PRAY. e botão Compre agora.",
+    href: DOXA_STORE_URL,
+  },
+  {
+    src: "/doxa/banner-camisetas-oversized.jpg",
+    alt: "Doxa: camisetas oversized, fé mais estilo, design exclusivo. Fotos em preto e branco de um homem e de uma mulher de costas.",
+    href: DOXA_STORE_URL + "/masculino/oversized/",
+  },
+];
+
 export default function Doxa() {
   return (
     <div className="dxp">
@@ -28,6 +48,9 @@ export default function Doxa() {
           <a className="btn" href={DOXA_STORE_URL} target="_blank" rel="noopener noreferrer">Ir para a loja</a>
         </div>
       </section>
+      <section className="sec"><div className="w">
+        <DoxaBanners slides={banners} />
+      </div></section>
       <section className="sec"><div className="w">
         <div className="ttl"><h2>Compre por categoria</h2></div>
         <div className="links">
